@@ -1,4 +1,4 @@
-import { AppsIcon, Button } from '@fluentui/react-northstar'
+import { AppsIcon, Button, Flex } from '@fluentui/react-northstar'
 import { FunctionComponent } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -22,13 +22,15 @@ const Home: FunctionComponent<HomeProps> = ({ routes }) => {
         and they will also show up in the list bellow
       </p>
       <h3>Components</h3>
-      {routes.map(({ name, path }) => (
-        <Button as={Link} to={path}>
-          <AppsIcon />
-          &nbsp;&nbsp;
-          {name}
-        </Button>
-      ))}
+      <Flex column gap="gap.smaller">
+        {routes.map(({ name, path }) => (
+          <Button as={Link} to={path}>
+            <AppsIcon />
+            &nbsp;&nbsp;
+            {name}
+          </Button>
+        ))}
+      </Flex>
     </div>
   )
 }
