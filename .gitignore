@@ -11,6 +11,10 @@
 # production
 /build
 
+/src/pages/
+!/src/pages/Example/
+!/src/pages/Home/
+
 # misc
 .DS_Store
 .env.local
