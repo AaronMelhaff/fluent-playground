@@ -1,6 +1,6 @@
-import { Button, DoorArrowLeftIcon } from '@fluentui/react-northstar'
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
+import { Button, DoorArrowLeftIcon } from "@fluentui/react-northstar";
+import { FC } from "react";
+import { Link } from "react-router-dom";
 
 interface ExampleProps {}
 
@@ -15,7 +15,7 @@ const Example: FC<ExampleProps> = () => {
         &nbsp;&nbsp; Return home
       </Button>
     </div>
-  )
-}
+  );
+};
 
-export default Example
+export default Example;

@@ -1,13 +1,14 @@
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home/Home'
-import { FunctionComponent, useMemo } from 'react'
-import Example from './pages/Example/Example'
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import { FunctionComponent, useMemo } from "react";
+import Example from "./pages/Example/Example";
+import DashboardDemo from "./pages/Dashboard/DashboardDemo";
 
 /*
   Add your components to the Array and a route will be generated for them.
 */
-const components: FunctionComponent<any>[] = [Example]
+const components: FunctionComponent<any>[] = [Example, DashboardDemo];
 
 function App() {
   const routes = useMemo(
@@ -16,8 +17,8 @@ function App() {
         name: Comp.name ?? Comp.prototype.name,
         path: `/${(Comp as any).name ?? (Comp as any).prototype.name}`,
       })),
-    [],
-  )
+    []
+  );
   const routeComponents = useMemo(
     () =>
       components.map((Comp) => (
@@ -26,8 +27,8 @@ function App() {
           element={<Comp />}
         />
       )),
-    [],
-  )
+    []
+  );
 
   return (
     <BrowserRouter>
@@ -36,7 +37,7 @@ function App() {
         <Route path="/" element={<Home routes={routes} />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

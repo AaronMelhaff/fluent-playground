@@ -1,16 +1,16 @@
-import { AppsIcon, Button, Flex } from '@fluentui/react-northstar'
-import { FunctionComponent } from 'react'
-import { Link } from 'react-router-dom'
+import { AppsIcon, Button, Flex } from "@fluentui/react-northstar";
+import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 
-import './Home.css'
+import "./Home.css";
 
 interface ComponentRoute {
-  name: string
-  path: string
+  name: string;
+  path: string;
 }
 
 interface HomeProps {
-  routes: ComponentRoute[]
+  routes: ComponentRoute[];
 }
 
 const Home: FunctionComponent<HomeProps> = ({ routes }) => {
@@ -18,7 +18,7 @@ const Home: FunctionComponent<HomeProps> = ({ routes }) => {
     <div className="Home">
       <h1>Fluent Northstar playground</h1>
       <p>
-        Add your own components to the components array in <code>App.tsx</code>{' '}
+        Add your own components to the components array in <code>App.tsx</code>{" "}
         and they will also show up in the list bellow
       </p>
       <h3>Components</h3>
@@ -32,7 +32,7 @@ const Home: FunctionComponent<HomeProps> = ({ routes }) => {
         ))}
       </Flex>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
