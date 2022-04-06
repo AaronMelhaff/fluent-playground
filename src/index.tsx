@@ -1,9 +1,9 @@
+import { Provider, teamsTheme } from "@fluentui/react-northstar";
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Provider, teamsTheme } from "@fluentui/react-northstar";
 
 ReactDOM.render(
   <Provider theme={teamsTheme}>

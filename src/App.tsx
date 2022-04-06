@@ -1,7 +1,8 @@
 import "./App.css";
+import * as React from "react";
+import { FunctionComponent, useMemo } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import { FunctionComponent, useMemo } from "react";
 import Example from "./pages/Example/Example";
 import DashboardDemo from "./pages/Dashboard/DashboardDemo";
 

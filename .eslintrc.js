@@ -13,7 +13,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "airbnb",
-    "prettier"
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -23,15 +23,11 @@ module.exports = {
     ecmaVersion: 8,
     sourceType: "module",
   },
-  plugins: [
-    "react",
-    "jest",
-    "prettier"
-  ],
+  plugins: ["react", "jest", "prettier"],
   rules: {
-    "linebreak-style": ["error", "windows"],
     "no-debugger": "warn",
     "react/prop-types": "off",
+    "react/function-component-definition": "off",
     "react/jsx-filename-extension": ["error", { extensions: [".tsx", ".jsx"] }],
     "react/require-default-props": "off",
     "react/no-unused-prop-types": "off",
@@ -45,12 +41,15 @@ module.exports = {
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/no-explicit-any": "off",
-    "prettier/prettier": "error"
+    "prettier/prettier": "warn",
+    "react/jsx-props-no-spreading": "off",
   },
-  overrides: [{
-    files: ["*.js"],
-    rules: {
-      "@typescript-eslint/no-var-requires": "off"
+  overrides: [
+    {
+      files: ["*.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+      },
     },
-  }],
+  ],
 };
