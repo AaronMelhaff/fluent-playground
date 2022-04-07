@@ -4,12 +4,11 @@ import { FunctionComponent, useMemo } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Example from "./pages/Example/Example";
-import DashboardDemo from "./pages/Dashboard/DashboardDemo";
 
 /*
   Add your components to the Array and a route will be generated for them.
 */
-const components: FunctionComponent<any>[] = [Example, DashboardDemo];
+const components: FunctionComponent<any>[] = [Example];
 
 function App() {
   const routes = useMemo(
