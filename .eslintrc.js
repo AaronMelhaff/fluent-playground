@@ -23,7 +23,7 @@ module.exports = {
     ecmaVersion: 8,
     sourceType: "module",
   },
-  plugins: ["react", "jest", "prettier"],
+  plugins: ["react", "react-hooks", "jest", "prettier"],
   rules: {
     "no-debugger": "warn",
     "react/prop-types": "off",
@@ -34,6 +34,7 @@ module.exports = {
     "react/destructuring-assignment": "off",
     "import/extensions": "off",
     "import/no-unresolved": "off",
+    "import/prefer-default-export": "off",
     quotes: ["error", "double"],
     semi: ["error", "always"],
     "no-unused-vars": "off",
@@ -43,6 +44,9 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": "warn",
     "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": ["warn"],
+    "@typescript-eslint/no-unnecessary-type-constraint": ["warn"],
+    "react-hooks/exhaustive-deps": ["warn"],
   },
   overrides: [
     {
