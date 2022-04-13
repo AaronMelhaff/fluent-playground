@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Add your components
 
-Add components to the components array in `App.js` to have a route and homepage link generated to your playground component.
+Add components to the components array in `App.tsx` to have a route and homepage link generated to your playground component.
 
 ## Available Scripts
 
